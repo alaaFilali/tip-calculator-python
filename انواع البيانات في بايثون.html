@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>انواع البيانات في بايثون</title>
+</head>
+
+<body>
+    <div class="book-page">
+        <h1 class="book-title">انواع البيانات في بايثون</h1>
+        <div class="content">
+            <p>
+                رأينا في الدروس السابقة اننا لحساب عدد الحروف في 
+                string 
+                ما
+                نستعمل الدالة  
+                len 
+            </p>
+            <pre><code>
+print(len("Alaa"))
+            </code></pre>
+            <pre><code>
+4
+            </code></pre>
+            <p>
+                الان ماذا سوف يحدث لو مررت داخل اقواس الدالة عدد وليس 
+                string 
+                ؟
+            </p>
+            <pre><code>
+print(len(12345))
+            </code></pre>
+            <p>
+                سوف احصل على خطأ من نوع 
+                TypeError 
+            </p>
+            <p>
+                سابقا راينا نوع بيانات وهو سلاسل الحروف 
+                string 
+                ولكن هناك انواع اخرى وسوف نعرف بعضها في درس اليوم
+                كالاعداد الصحيحة والاعداد بفاصلة و 
+                boolean
+            </p>
+            <p>
+                ال 
+                string 
+                هي سلسلة من الحروف ونعرفها من خلال علامات التنصيص في البداية والنهاية
+            </p>
+            <pre><code>
+"Hello"
+            </code></pre>
+            <p>
+                فلو اردت طباعة الحرف الاول من ال
+                string 
+                استعمل علامات 
+                []
+                ثم داخلها اضع رقم الحرف في الكلمة و الحرف الاول عند 
+                0
+            </p>
+            <pre><code>
+print("Hello"[0])
+            </code></pre>
+            <pre><code>
+H
+            </code></pre>
+            <p>
+                لطباعة الحرف الاخير 
+            </p>
+            <pre><code>
+print("Hello"[4])
+            </code></pre>
+            <pre><code>
+o
+            </code></pre>
+            <p>
+                لو وضعت عددا داخل علامات تنصيص فسوف يعتبر 
+                string 
+                وليس عددا
+            </p>
+            <pre><code>
+"123"
+            </code></pre>
+            <p>
+                وسوف يعامل معاملة ال 
+                string 
+                وليس كالاعداد العادية
+            </p>
+            <pre><code>
+print("123" + "456")
+            </code></pre>
+            <pre><code>
+123456
+            </code></pre>
+            <p>
+                اما اذا اردت عملية الجمع العادية بين عددين فقط قم بكتابة العدد بدون اي شيء 
+                وبدون علامات التنصيص
+            </p>
+            <pre><code>
+print(123 + 456)
+            </code></pre>
+            <pre><code>
+579
+            </code></pre>
+            <p>
+                يمكنك اضافة علامة 
+                _ 
+                بين الاعداد وسوف يتم تجاهلها
+            </p>
+            <pre><code>
+print(123_456_789)
+            </code></pre>
+            <pre><code>
+123456789
+            </code></pre>
+            <p>
+                هذه الاعداد بدون فاصلة تسمى 
+                integer
+                والتي بالفاصلة تسمى 
+                float
+            </p>
+            <pre><code>
+3.14
+            </code></pre>
+            <p>
+                والفاصلة هي النقطة وليس الفاصلة العادية
+            </p>
+            <p>
+                والنوع الاخير من انواع البيانات هو ال 
+                boolean 
+                وهو ابسط نوع لان لديه فقط قيمتين 
+                True 
+                او 
+                False
+            </p>
+            <pre><code>
+True
+            </code></pre>
+        </div>
+    </div>
+</body>
+
+</html>
