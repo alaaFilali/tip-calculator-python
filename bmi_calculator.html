@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>
+        تمرين حساب ال
+        Bmi
+    </title>
+</head>
+
+<body>
+    <div class="book-page">
+        <h1 class="book-title">
+            تمرين حساب ال
+            Bmi
+        </h1>
+        <div class="content">
+            <p>
+                التعليمات: 
+            </p>
+            <p>
+                اكتب برنامج الذي يحسب مؤشر كتلة الجسم أو 
+                bmi 
+                من طول و وزن السمتخدم 
+            </p>
+            <p>
+                طريقة حساب مؤشر كتلة الجسم هو عن طريق قسمة وزن الشخص بالكيلوغرام 
+                على طوله بالمتر مربع
+            </p>
+            <p>
+                فان كان مؤشر كتلة الجسم الخاص بك تحت 
+                18.5
+                فلديك نقص في الوزن 
+                اما ان كان بين
+                18.5
+                و 
+                25
+                فوزنك طبيعي
+                اما ان كان وزنك بين 
+                25
+                و 
+                30
+                فلديك زيادة في الوزن
+                اما ان كان فوق
+                30
+                فلديك السمنة
+            </p>
+            <p>
+                والنتيجة النهائية للبرنامج سوف تكون هكذا: 
+            </p>
+            <pre><code>
+enter your height in m: 1.7
+enter your weight in kg: 61
+21
+            </code></pre>
+            <p>
+                ترون ان النتيجة هي عبارة عن 
+                Intger
+                لان نتيجة القسمة هي 
+                float 
+                وعليك ان تقوم ببحث صغير حول كيفية تحقيق ذلك
+            </p>
+            <p>
+                اليك بعض الكود لتبدأ به و حظا موفقا في حل التمرين.
+            </p>
+            <pre><code>
+height = input("enter your height in m: ")
+weight = input("enter your weight in kg: ")
+            </code></pre>
+            <p>
+                الحل: 
+            </p>
+            <pre><code>
+bmi = weight / height ** 2
+print(bmi)
+            </code></pre>
+            <p>
+                عند تشغيل البرنامج كما هو الان سوف احصل على 
+                error 
+                والسبب هو ان انواع البيانات المخزنة في 
+                height 
+                و 
+                weight 
+                هي 
+                string 
+                وانا احاول ان استعملها مع عمليات رياضية
+            </p>
+            <p>
+                علينا التحويل والوزن يمكن ان يكون 
+                Integer 
+                اما الطول فهو 
+                float 
+                لان به فاصلة
+            </p>
+            <pre><code>
+bmi = int(weight) / float(height) ** 2
+print(bmi)
+            </code></pre>
+            <pre><code>
+1.7
+61
+21.45687816789214
+            </code></pre>
+            <p>
+                وقلنا في بداية تعليمات التمرين ان النتيجة يجب ان تكون 
+                Integer 
+                ويمكننا تحقيق ذلك من خلال تحويل النتيجة من 
+                float 
+                الى 
+                integer 
+                باستعمال دالة 
+                int
+            </p>
+            <pre><code>
+height = input("enter your height in m: ")
+weight = input("enter your weight in kg: ")
+
+bmi = int(weight) / float(height) ** 2
+print(int(bmi))
+            </code></pre>
+            <p>
+                لاحظ هنا ان دالة 
+                int 
+                لم تقم بتدوير العدد وانما قامت بقص الفاصلة ومابعدها ولكن لتدوير العدد 
+                مثلا لرقمين بعد الفاصلة او للوحدة هذا سوف نراه في الدرس القادم.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
