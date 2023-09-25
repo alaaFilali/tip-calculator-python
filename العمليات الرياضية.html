@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>العمليات الرياضية</title>
+</head>
+
+<body>
+    <div class="book-page">
+        <h1 class="book-title">العمليات الرياضية</h1>
+        <div class="content">
+            <p>
+                في الدروس السابقة كنا نستعمل علامة ال 
+                + 
+                للصق اثنان من 
+                string 
+                مع بعض او لجمع عددين مع بعض اي عملية الجمع الرياضية العادية
+                واليوم سوف اريكم بعض العمليات الاخرى التي يمكنكم استعمالها في البرنامج 
+                الخاصة بكم 
+            </p>
+            <pre><code>
+print( 5 + 7 )
+print( 5 - 2 )
+print( 3 * 2 )
+print( 12 / 2 )
+            </code></pre>
+            <pre><code>
+12
+3
+6
+6.0
+            </code></pre>
+            <p>
+                علامة الناقص للطرح والنجمة للضرب و
+                slash
+                 للقسمة ولاحظ ان نتيجة 
+                القسمة هي 
+                float
+                مع ان العددين 
+                12
+                و 
+                2
+                هما 
+                Intergs
+            </p>
+            <pre><code>
+print(type(12 / 2))
+            </code></pre>
+            <pre><code>
+< class 'float' >
+            </code></pre>
+            <p>
+                عملية القوى يمكنك استعمالها ب علامتين نجمة هكذا: 
+            </p>
+            <pre><code>
+print( 2 ** 5)
+print( 2 * 2 * 2 * 2 * 2)
+            </code></pre>
+            <pre><code>
+32
+32
+            </code></pre>
+            <p>
+                عندما تستعمل عمليات رياضية مختلفة يجب ان تهتم لاولية العمليات 
+                والقاعدة هنا مختصرة في كلمة 
+                PEMDAS
+                الاقواس 
+                Prentheses
+                ثم القوة 
+                Exponent 
+                ثم الضرب 
+                Multiplication
+                ثم القسمة 
+                Divition 
+                ثم الجمع 
+                Addition 
+                ثم الطرح 
+                Subtraction 
+            </p>
+            <p>
+                الضرب والقسمة لهما نفس الاولية ونفس الشيء مع الجمع والطرح وان كانو في
+                نفس السطر فالتي على اليمين هي التي سوف تنفذ الاول
+            </p>
+            <p>
+                اليك بعض الامثلة: 
+            </p>
+            <pre><code>
+print( 3 * 3 + 3 / 3 - 3)
+            </code></pre>
+            <pre><code>
+7.0
+            </code></pre>
+            <p>
+                باضافة الاقواس سوف يتغير ترتيب الاولوية وسوف نحصل على نتيجة مختلفة
+            </p>
+            <pre><code>
+print( 3 * (3 + 3) / 3 - 3)
+            </code></pre>
+            <pre><code>
+3.0
+            </code></pre>
+        </div>
+    </div>
+</body>
+
+</html>
