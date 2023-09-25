@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>تمرين حول انواع البيانات </title>
+</head>
+
+<body>
+    <div class="book-page">
+        <h1 class="book-title">تمرين حول انواع البيانات</h1>
+        <div class="content">
+            <p>
+                التعليمات:
+            </p>
+            <p>
+                اكتب برنامج يقوم بجمع ارقام عدد يدخله المستخدم يتكون من رقمين مثلا 
+                ان ادخل المستخدم العدد 
+                35
+                فالنتيجة سوف تكون 
+                5
+                زائد 
+                3
+                اي 
+                8
+            </p>
+            <p>
+                ملاحظة: برنامجك يجب ان يعمل مع مختلف الاعداد واي عدد يتكون من رقمين
+            </p>
+            <p>
+                والنتيجة النهائية للبرنامج سوف تكون هكذا: 
+            </p>
+            <pre><code>
+Type a two digit number: 27
+9
+            </code></pre>
+            <p>
+                عليك ان تفكر في كيفية استعمال ما تعلمته في الدروس السابقة وابدأ من 
+                هذا السطر. حظا موفقا في حل التمرين
+            </p>
+            <pre><code>
+two_digit_number = input("Type a two digit number: ")
+            </code></pre>
+            <p>
+                الحل: 
+            </p>
+            <p>
+                لدينا هذا المتغير 
+                two_digit_number
+                الذي سوف يحمل عدد متكون من رقمين سوف يدخله المستخدم ولكن نوعه 
+                هو 
+                string 
+                وهذا ماسوف تأكده لنا دالة 
+                type
+            </p>
+            <pre><code>
+print(type(two_digit_number))
+            </code></pre>
+            <pre><code>
+< class 'str' >
+            </code></pre>
+            <p>
+                عندما اردنا طباعة الحرف الاول من كلمة 
+                "Hello"
+                استعملنا علامة 
+                []
+                ثم وضعها داخلها موضع الحرف والحرف الاول عند 
+                0 
+                هكذا: 
+            </p>
+            <pre><code>
+print("Hello"[0])
+            </code></pre>
+            <pre><code>
+H
+            </code></pre>
+            <p>
+                وبما ان المتغير 
+                two_digit_number
+                هو عبارة عن 
+                string 
+                يمكننا فعل نفس الشيء اضافة الى انه يملك رقمين فقط اذا 
+                هناك الحرف الاول عند 
+                0
+                والاخر عند 
+                1
+            </p>
+            <pre><code>
+print(two_digit_number[0])
+print(two_digit_number[1])
+            </code></pre>
+            <pre><code>
+Type a two digin number: 89
+8
+9
+            </code></pre>
+            <p>
+                الان في مكان طباعة الارقام سوف اخزنها في متغيرات ثم اقوم بعملية الجمع 
+                بعد ان احول كل رقم الى 
+                int
+            </p>
+            <pre><code>
+two_digit_number = input("Type a two digit number: ")
+
+first_digit = int(two_digit_number[0]) 
+second_digit = int(two_digit_number[1]) 
+
+print(first_digit + second_digit)
+            </code></pre>
+            <p>
+                لو نسيت مرحلة تحويل كل رقم من 
+                string 
+                الى 
+                int 
+                سوف تحصل على الرقم الذي ادخله المستخدم لانه في مكان تنفيذ عملية الجمع 
+                الرياضية العادية سوف يعتقد انك تريد الصاف ال 
+                string 
+                الاول مع الثاني
+                وهذا سوف يعيدنا الى نقطة البداية
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
