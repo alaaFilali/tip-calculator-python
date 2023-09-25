@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>تحويل انواع البيانات</title>
+</head>
+
+<body>
+    <div class="book-page">
+        <h1 class="book-title">تحويل انواع البيانات</h1>
+        <div class="content">
+            <p>
+                اليك الكود الموالي:
+            </p>
+            <pre><code>
+num_char = len(input("What's your name?: "))
+print("Your name has " + num_char + " characters.")
+            </code></pre>
+            <p>
+                عند تشغيل البرنامج سوف يسألك ان تدخل اسمك ثم يخزن في متغير 
+                num_char
+                ثم يقوم بطباعة جملة اسمك فيه عدد معين من الحروف 
+                ولكن ماسوف تحصل عليه هو 
+                error 
+                من نوع 
+                TypeError 
+                والسبب هو انك تريد عمل 
+                concatination 
+                اي لصق بين الجملة الاولى مع قيمة المتغير 
+                num_char
+                ثم مع الجملة الاخرى وهذا غير ممكن لان عملية اللصق تحدث بين 
+                strings 
+                اما نوع المتغير 
+                num_char 
+                ليس 
+                string 
+                لانه يرجع عدد الاحرف في 
+                string  
+                معين
+                اي ان نوعه هو 
+                int 
+                اي عدد بدون فاصلة
+            </p>
+            <p>
+                اذن كيف يمكننا تجنب هذا النوع من الاخطاء؟ كيف يمكننا معرفة نوع المتغير؟
+                الاجابة يمكننا استعمال دالة 
+                type 
+                وسوف ترجع لك نوع ما اعطيته لها
+            </p>
+            <pre><code>
+num_char = len(input("What's your name?: "))
+print(type(num_char))
+            </code></pre>
+            <pre><code>
+What's your name?: Alaa
+< class 'int' >
+            </code></pre>
+            <p>
+                قال لي ان نوع المتغير 
+                num_char
+                هو 
+                int
+            </p>
+            <p>
+                الان لنجعل عبارة الطباعة السابقة تعمل لابد ان نحول المتغير 
+                num_char
+                الى 
+                string 
+                ويمكننا فعل ذلك عن طريق دالة 
+                str
+            </p>
+            <pre><code>
+num_char = len(input("What's your name?: "))
+new_num_char = str(num_char)
+print("Your name has " + new_num_char + " characters.")
+            </code></pre>
+            <pre><code>
+What's your name?: Alaa 
+Your name has 4 characters.
+    </code></pre>
+            <p>
+                انت لست محدود بتحويل فقط الاعداد الى 
+                strings 
+                يمكنك تحويل مختلف الانواع وهذه بعض الامثلة:
+            </p>
+            <pre><code>
+a = 123
+print(type(a))
+
+a = str(123)
+print(type(a))
+
+a = float(123)
+print(type(a))
+            </code></pre>
+            <pre><code>
+< class 'int' >
+< class 'str' >
+< class 'float' >
+            </code></pre>
+            <p>
+                الان ماذا تعتقد سوف تكون نتيجة هذا السطر 
+            </p>
+            <pre><code>
+print(70 + float("100.5"))
+            </code></pre>
+            <p>
+                الاجابة: 
+            </p>
+            <pre><code>
+170.5
+            </code></pre>
+            <p>
+                وما حدث خلف الكواليس هو تم تحويل
+                "100.5"
+                الذي هو 
+                string 
+                الى 
+                float 
+                ثم تمت عملية الجمع بينه وبين العدد 
+                70
+                والنتيجة هي العدد 
+                170.5
+                من نوع 
+                float 
+                لان به فاصلة
+            </p>
+            <p>
+                الان ماذا عن نتيجة هذا السطر: 
+            </p>
+            <pre><code>
+print(str(70) + str(100))
+            </code></pre>
+            <pre><code>
+70100
+            </code></pre>
+            <p>
+                كملخص للدرس يمكنك استعمال الدالة 
+                type 
+                لمعرفة نوع المتغير الذي تتعامل معه ويمكنك استعمال الدالة 
+                str 
+                او 
+                int 
+                او 
+                float 
+                لتحول الى النوع الذي تريده.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
