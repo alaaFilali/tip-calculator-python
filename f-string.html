@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>f-string</title>
+</head>
+
+<body>
+    <div class="book-page">
+        <h1 class="book-title">f-string</h1>
+        <div class="content">
+            <p>
+                عندما اقسم العدد 
+                8
+                على العدد 3
+                سوف احصل على نتيجة باعداد كثيرة بعد الفاصلة
+            </p>
+            <pre><code>
+print(8 / 3)
+            </code></pre>
+            <pre><code>
+2.6666666666665
+            </code></pre>
+            <p>
+                واذا قمت بتحويل نتيجة العملية الى 
+                int 
+                نلاحظ ان ما تفعله هو قص الفاصلة وما بعدها فقط
+            </p>
+            <pre><code>
+print(int(8 / 3))
+            </code></pre>
+            <pre><code>
+2
+            </code></pre>
+            <p>
+                ولكن مانفعله عادة ليس قص الفاصلة ولكن تدوير العدد الى الوحدة او الى 
+                رقمين بعد الفاصلة فاذا كانت النتيجة 
+                2.5
+                سوف تصبح 
+                3
+                واذا كانت 
+                2.4
+                سوف تصبح 
+                2
+                ولفعل ذلك في بايثون نستعمل الدالة 
+                round
+            </p>
+            <pre><code>
+print(round(8 / 3))
+            </code></pre>
+            <pre><code>
+3
+            </code></pre>
+            <p>
+                واذا اردت تدوير النتيجة الى مثلا رقمين بعد الفاصلة او ثلاثة 
+                يمكنك اضافة فاصلة ثم العدد الذي تريد التدوير له هكذا:
+            </p>
+            <pre><code>
+print(round(2.66666666666, 2))
+            </code></pre>
+            <pre><code>
+2.67
+            </code></pre>
+            <p>
+                نحن نعلم ان نتيجة عملية القسمة هي 
+                float 
+                وهناك هناك طريقة لو اردت النتيجة على شكل 
+                int 
+                وهي استعمال علامتين قسمة وليست واحدة فقط 
+            </p>
+            <pre><code>
+print(8 // 3)
+            </code></pre>
+            <pre><code>
+2
+            </code></pre>
+            <p>
+                لو خزنا نتيجة عملية رياضية في متغير يمكننا ان نكمل الحساب بتلك النتيجة 
+                على ذلك المتغير 
+            </p>
+            <pre><code>
+result = 4 / 2
+result /= 2
+print(result)
+            </code></pre>
+            <pre><code>
+1.0
+            </code></pre>
+            <p>
+                النتيجة هي 
+                1.0
+                لاننا خزنا نتيجة القسمة 
+                4
+                على 
+                2
+                وهي 
+                2.0
+                ثم قسمناها مجددا على 
+                2
+                بالعملية 
+                /=
+                ومعناها اعد قسمة 
+                result 
+                على 
+                2
+                وخزن النتيجة في 
+                result 
+                وهي فقط اختصار لهذا السطر
+            </p>
+            <pre><code>
+result = result / 2
+            </code></pre>
+            <p>
+                وبنفس الطريقة مع العمليات الاخرى كالجمع والطرح ...الخ
+            </p>
+            <p>
+                الان لدي متغير 
+                score 
+                الذي يحمل قيمة 
+                0
+                اي 
+                Integer 
+                واريد طباعته في الشاشة
+                وطبعا هذا السطر سوف يعطينا 
+                error 
+            </p>
+            <pre><code>
+score = 0
+print("Your score is " + score)
+            </code></pre>
+            <p>
+                لذلك علينا تحويله الى 
+                string 
+                عن طريق دالة 
+                str 
+                هكذا: 
+            </p>
+            <pre><code>
+score = 0
+print("Your score is " + str(score))
+            </code></pre>
+            <p>
+                ولكن هذه الطريقة ليست عملية جدا فتخيل ان لدي 
+                3
+                متغيرات او 
+                4
+                يجب علي ان احولهم جميعا 
+                وان استعمل عدة علامات زائد
+                ولكن هناك طريقة سهلة لفعل ذلك وهي استعمال 
+                f-string
+            </p>
+            <pre><code>
+score = 0
+height = 1.7
+is_winning = True
+print(f"your score is {score}, your height is {height}, you are winning is {is_winning}")
+            </code></pre>
+            <pre><code>
+your score is 0, your height is 1.7, you are winning is True
+            </code></pre>
+            <p>
+                واستطعت فعل ذلك من خلال اضافة حرف 
+                f 
+                في بداية ال 
+                string 
+                خارج ال 
+                "
+                ثم اي متغير اود ان ادخله في ال
+                string 
+                الخاص بي اضعه داخل 
+                {}
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
