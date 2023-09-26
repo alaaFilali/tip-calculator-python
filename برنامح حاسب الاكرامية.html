@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>برنامح حاسب الاكرامية</title>
+</head>
+
+<body>
+    <div class="book-page">
+        <h1 class="book-title">برنامح حاسب الاكرامية</h1>
+        <div class="content">
+            <p>
+                سوف نقوم ببناء برنامج حاسب الاكرامية ونتيجة البرنامج النهائية سوف
+                تكون هكذا: 
+            </p>
+            <pre><code>
+Welcome to the tip calculator.
+What was the total bill? $124.56
+What percentage tip would you like to give? 10, 12, 15? 12
+How many people to split the bill? 7
+Each person should pay: $19.93
+            </code></pre>
+            <p>
+                ذهبت انت و 
+                6
+                من الاصدقاء الى مطعم وحظيتم بوجبة لذيذة والفاتورة النهائية كانت 
+                $124.56
+                اذن كل واحد فيكم سوف يدفع 
+                $19.93
+                بعد اضافة قيمة الاكرامية للفاتورة  
+                وهذا مافعله البرنامج اضاف نسبة 
+                10%
+                للفاتورة كاملة وهو مايسمى بالاكرامية وهذا شيء متعارف عليه في الدول 
+                الغربية 
+            </p>
+            <p>
+                لاحظ ان النتيجة النهائية فيها رقمين بعد الفاصلة وهذا شيء 
+                سوف نفعله في البرنامج والان يمكنك ان تذهب وتحاول كتابة هذا البرنامج 
+                اما لأولئك الذين هم غير متمكنين في الرياضيات جيدا سوف اعطيكم 
+                معادلة تسحب النتيجة النهائية مباشرة يمكنكم استعمالها لاننا هنا 
+                لانختبر قدراتكم الرياضية ولكن البرمجية منها
+            </p>
+            <p>
+                مثلا لو كانت الفاتورة
+                $150
+                وعدد الاشخاص هو 
+                5
+                ونسبة الاكرامية هي 
+                12%
+                فكل شخص سوف يدفع  
+                (150 / 5) * 1.12
+                اي 
+                $33.6
+            </p>
+            <p>
+                الحل: 
+            </p>
+            <p>
+                اول سوف نقوم بطباعة رسالة ترحيب بالمتسخدم
+            </p>
+            <pre><code>
+print("Welcome to the tip calculator.")
+            </code></pre>
+            <p>
+                ثانيا سوف اسأله عن الفاتورة النهائية واخزنها في متغير 
+                bill
+                تذكر ان تحوله الى 
+                float 
+                لان ماترجعه الدالة 
+                input 
+                نوعه 
+                string 
+                ولا يمكننا ان نستخدمه في العمليات الرياضية
+            </p>
+            <pre><code>
+bill = float(input("What was the total bill? $"))
+            </code></pre>
+            <p>
+                ثم سوف اسأله عن النسبة المئوية التي يريد اضافتها للفاتورة 
+                اما 
+                10
+                او 
+                12
+                او 15
+                بالمئة
+            </p>
+            <pre><code>
+tip = int(input("What percentage tip would you like to give? 10, 12, 15? "))
+            </code></pre>
+            <p>
+                ثم سوف اسأله عن عدد الاشخاص لقسمة الفاتورة الجديدة عليهم
+            </p>
+            <pre><code>
+people = int(input("How many people to split the bill? "))
+            </code></pre>
+            <p>
+                الان نحن جاهزون لحساب كم سيدفع كل شخص 
+            </p>
+            <pre><code>
+bill_per_person = (bill / people) * (1 + tip / 100)
+            </code></pre>
+            <p>
+                تبقى ان نظهر كل سوف يدفع كل شخص عن طريق اظهار رسالة
+                ولا ننسى ان ندور العدد الى رقمين بعد الفاصلة
+            </p>
+            <pre><code>
+print(f"Each person should pay: ${round(bill_per_person, 2)}")
+            </code></pre>
+            <p>
+                الكود كاملا: 
+            </p>
+            <pre><code>
+print("Welcome to the tip calculator.")
+bill = float(input("What was the total bill? $"))
+tip = int(input("What percentage tip would you like to give? 10, 12, 15? "))
+people = int(input("How many people to split the bill? "))
+bill_per_person = (bill / people) * (1 + tip / 100)
+print(f"Each person should pay: ${round(bill_per_person, 2)}")
+            </code></pre>
+        </div>
+    </div>
+</body>
+
+</html>
