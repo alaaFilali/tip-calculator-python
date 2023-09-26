@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>تمرين عدد الاسابيع المتبقية</title>
+</head>
+
+<body>
+    <div class="book-page">
+        <h1 class="book-title">تمرين عدد الاسابيع المتبقية</h1>
+        <div class="content">
+            <p>
+                التعليمات: 
+            </p>
+            <p>
+                اكتب برنامج باستعمال الرياضيات وال 
+                f-string 
+                لكي يخبرك كم عدد الايام والاسابيع والاشهر المتبقية من عمرك لو عشت 
+                90
+                سنة
+            </p>
+            <p>
+                البرنامج سوف يأخد عمرك الحالي وسوف تكون نتيجة الكود النهائية كالتالي:
+            </p>
+            <pre><code>
+what is your current age?: 56
+you have 12400 days, 1768 weeks and 408 months left.
+            </code></pre>
+            <p>
+                العام الواحد فيه
+                365
+                يوم و 
+                52
+                اسبوع و 
+                12
+                شهر 
+                واليك هذا الكود لتبدأ به وحظا موفقا في حل التمرين.
+            </p>
+            <pre><code>
+age = input("what is your current age?: ")
+            </code></pre>
+            <p>
+                الحل: 
+            </p>
+            <p>
+                اول شيء سوف افعله هو تحويل متغير العمر الى 
+                integer
+                حتى يتسنى لي عمل مختلف العمليات الرياضية عليه
+            </p>
+            <pre><code>
+age_as_int = int(age)
+            </code></pre>
+            <p>
+                ولحساب عدد الاعوام المتبقية سوف انقص 
+                90
+                من العمر الحالي
+            </p>
+            <pre><code>
+years_remaining = 90 - age_as_int
+            </code></pre>
+            <p>
+                ولحساب عدد الايام والاسابيع والاشهر المتبقية نستعمل عدد الاعوام 
+                المتقية ونضربه في عدد الاشهر في العام لنحصل على عدد الاشهر المتبقية 
+                وفي عدد الاسابيع في العام لنحصل على عدد الاسابيع المتبقية وهكذا:
+            </p>
+            <pre><code>
+days_remaining = years_remaining * 365
+months_remaining = years_remaining * 12
+weeks_remaining = years_remaining * 52
+            </code></pre>
+            <p>
+                الان تبقى ان استعمل 
+                f-string 
+                لاظهر هذه المتغيرات في رسالة واحدة 
+            </p>
+            <pre><code>
+age = input("what is your current age?: ")
+years_ remaining = 90 - age_as_int
+days_remaining = years_remaining * 365
+months_remaining = years_remaining * 12
+weeks_remaining = years_remaining * 52
+
+message = f"you have {days_remaining} days, {weeks_remaining} weeks and {months_remaining} months left."
+print(message)
+            </code></pre>
+        </div>
+    </div>
+</body>
+
+</html>
